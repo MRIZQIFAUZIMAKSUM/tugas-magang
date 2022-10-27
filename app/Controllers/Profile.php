@@ -8,6 +8,7 @@ class Profile extends BaseController
 {
     public function index()
     {
-        return view('profile/index');
+        $data['title']= 'Dashboard';
+        return view('profile/index',$data);
     }
 }

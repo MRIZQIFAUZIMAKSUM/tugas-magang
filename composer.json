@@ -13,7 +13,8 @@
         "kint-php/kint": "^4.2",
         "laminas/laminas-escaper": "^2.9",
         "psr/log": "^1.1",
-        "almasaeed2010/adminlte": "~3.2"
+        "almasaeed2010/adminlte": "~3.2",
+        "myth/auth": "^1.2"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.1",

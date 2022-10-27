@@ -8,90 +8,81 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('AdminLTE/plugins/fontawesome-free/css/all.min.css')?>">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css')?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('AdminLTE/dist/css/AdminLTE.min.css')?>">
 </head>
+
 <body class="hold-transition login-page">
+  <?= $this->renderSection('content') ?>
 <div class="login-box">
   <div class="login-logo">
-    <a href="AdminLTE/index2.html"><b>Admin</b>LTE</a>
+    <a href="<?php echo base_url('AdminLTE/index2.html')?>"><b>Admin</b>LTE</a>
   </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+			<div class="card">
+				<h2 class="card-header"><?=lang('Auth.loginTitle')?></h2>
+				<div class="card-body">
 
-      <?php if($error_message ):
-        echo '<div class="alert alert-danger" role="alert"> 
-        ',$error_message,'
-        </div>';
-      endif; ?>
+					<?= view('Myth\Auth\Views\_message_block') ?>
 
-      <form action="/authlogin" method="post">
-        <div class="input-group mb-3">
-          <input type="input" name="userid" class="form-control" placeholder="username">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
+					<form action="<?= route_to('login') ?>" method="post">
+						<?= csrf_field() ?>
+						<?php if (session('errors.login')) : ?>
+							<div class="invalid-feedback">
+								<?= session('errors.login') ?>
+							</div>
+						<?php endif ?>
+						
+						<div class="form-group">
+							<label for="login"><?=lang('Auth.emailOrUsername')?></label>
+							<input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+								   name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
+							<div class="invalid-feedback">
+								<?= session('errors.login') ?>
+							</div>
+						</div>
 
-      <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div>
-      <!-- /.social-auth-links -->
 
-      <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p>
-      <p class="mb-0">
-        <a href="/register" class="text-center">Register</a>
-      </p>
-    </div>
-    <!-- /.login-card-body -->
-  </div>
+						<div class="form-group">
+							<label for="password"><?=lang('Auth.password')?></label>
+							<input type="password" name="password" class="form-control  <?php if (session('errors.
+							password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
+							<div class="invalid-feedback">
+								<?= session('errors.password') ?>
+							</div>
+						</div>
+
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
+								<?=lang('Auth.rememberMe')?>
+							</label>
+						</div>
+
+
+						<br>
+
+						<button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.loginAction')?></button>
+					</form>
+
+					<hr>
+
+
+					<p><a href="<?= url_to('register') ?>"><?=lang('Auth.needAnAccount')?></a></p>
+
+					<p><a href="<?= url_to('forgot') ?>"><?=lang('Auth.forgotYourPassword')?></a></p>
+
+				</div>
+			</div>
 </div>
-<!-- /.login-box -->
-
 <!-- jQuery -->
-<script src="AdminLTE/plugins/jquery/jquery.min.js"></script>
+<script src="<?php echo base_url('AdminLTE/plugins/jquery/jquery.min.js') ?>"></script>
 <!-- Bootstrap 4 -->
-<script src="AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo base_url('AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 <!-- AdminLTE App -->
-<script src="AdminLTE/dist/js/adminlte.min.js"></script>
+<script src="<?php echo base_url('AdminLTE/dist/js/AdminLTE.min.js') ?>"></script>
 </body>
 </html>
+

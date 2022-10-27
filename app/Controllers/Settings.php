@@ -3,16 +3,19 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use \App\Models\User;
 
 class Settings extends BaseController
 {
     public function index()
     {
-        return view('settings/index');
+        $data['title']= 'Dashboard';
+        return view('settings/index',$data);
     }
     public function pp()
     {
-        return view('pp/index');
+        $data['title']= 'Dashboard';
+        return view('pp/index',$data);
     }
     public function changepassword()
     {
@@ -22,7 +25,7 @@ class Settings extends BaseController
 
         $password_sh1 = sha1($old_pswd);
 
-        $user_model = new \App\Models\User();
+        $user_model = new User();
 
         $user = $user_model->GetUserLogin($userid, $password_sh1);
         
@@ -69,7 +72,7 @@ class Settings extends BaseController
            $msg = 'File has been uploaded';
          }
  
-        return redirect()->to( base_url('/settings') )->with('msg', $msg);
+        return redirect()->to( base_url('/profile') )->with('msg', $msg);
  
      }
  
@@ -104,7 +107,7 @@ class Settings extends BaseController
             $msg = 'File has been uploaded';
           }
   
-         return redirect()->to( base_url('/settings') )->with('msg', $msg);
+         return redirect()->to( base_url('/profile') )->with('msg', $msg);
   
       }
 }

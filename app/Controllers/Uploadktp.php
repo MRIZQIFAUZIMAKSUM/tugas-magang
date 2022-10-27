@@ -8,7 +8,8 @@ class Uploadktp extends BaseController
 {
     public function index()
     {
-        return view('ktp/index');
+      $data['title']= 'Dashboard';
+        return view('ktp/index',$data);
     }
     public function uploadktp()
     {  

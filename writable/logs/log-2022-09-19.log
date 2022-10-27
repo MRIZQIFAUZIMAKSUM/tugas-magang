@@ -1,0 +1,49 @@
+ERROR - 2022-09-19 03:46:29 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Model.php(772): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\codeigniter4-framework-872c8fb\app\Models\User.php(45): CodeIgniter\Model->__call('getWhere', Array)
+#6 C:\xampp\htdocs\codeigniter4-framework-872c8fb\app\Controllers\Login.php(24): App\Models\User->GetUserLogin('admin', '8cb2237d0679ca8...')
+#7 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\CodeIgniter.php(907): App\Controllers\Login->prosesLogin()
+#8 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codeigniter4-framework-872c8fb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Model.php(772): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\xampp\htdocs\codeigniter4-framework-872c8fb\app\Models\User.php(45): CodeIgniter\Model->__call('getWhere', Array)
+#5 C:\xampp\htdocs\codeigniter4-framework-872c8fb\app\Controllers\Login.php(24): App\Models\User->GetUserLogin('admin', '8cb2237d0679ca8...')
+#6 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\CodeIgniter.php(907): App\Controllers\Login->prosesLogin()
+#7 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter4-framework-872c8fb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter4-framework-872c8fb\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-09-19 03:46:29 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `userId` = :userId:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Models\User.php(45): CodeIgniter\Model->__call('getWhere', [...])
+ 5 APPPATH\Controllers\Login.php(24): App\Models\User->GetUserLogin('admin', '8cb2237d0679ca88db6464eac60da96345513964')
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Login->prosesLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

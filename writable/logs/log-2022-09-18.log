@@ -72,3 +72,198 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
  8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:13:31 --> Cannot call constructor
+in APPPATH\Controllers\Changepswd.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Changepswd->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:20:25 --> Undefined property: App\Controllers\Changepswd::$load
+in APPPATH\Controllers\Changepswd.php on line 12.
+ 1 APPPATH\Controllers\Changepswd.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$load', 'APPPATH\\Controllers\\Changepswd.php', 12, [])
+ 2 SYSTEMPATH\CodeIgniter.php(869): App\Controllers\Changepswd->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:21:22 --> Undefined property: App\Controllers\Changepswd::$input
+in APPPATH\Controllers\Changepswd.php on line 12.
+ 1 APPPATH\Controllers\Changepswd.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$input', 'APPPATH\\Controllers\\Changepswd.php', 12, [])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:23:42 --> Undefined property: App\Controllers\Changepswd::$session
+in APPPATH\Controllers\Changepswd.php on line 16.
+ 1 APPPATH\Controllers\Changepswd.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$session', 'APPPATH\\Controllers\\Changepswd.php', 16, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:23:51 --> Undefined property: App\Controllers\Changepswd::$session
+in APPPATH\Controllers\Changepswd.php on line 16.
+ 1 APPPATH\Controllers\Changepswd.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$session', 'APPPATH\\Controllers\\Changepswd.php', 16, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:25:03 --> Undefined property: App\Controllers\Changepswd::$session
+in APPPATH\Controllers\Changepswd.php on line 17.
+ 1 APPPATH\Controllers\Changepswd.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$session', 'APPPATH\\Controllers\\Changepswd.php', 17, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:29:19 --> Undefined property: App\Controllers\Changepswd::$db
+in APPPATH\Controllers\Changepswd.php on line 17.
+ 1 APPPATH\Controllers\Changepswd.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$db', 'APPPATH\\Controllers\\Changepswd.php', 17, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:34:18 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Controllers\Changepswd.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:35:21 --> A non-numeric value encountered
+in APPPATH\Controllers\Changepswd.php on line 20.
+ 1 APPPATH\Controllers\Changepswd.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Changepswd.php', 20, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:36:13 --> A non-numeric value encountered
+in APPPATH\Controllers\Changepswd.php on line 19.
+ 1 APPPATH\Controllers\Changepswd.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Changepswd.php', 19, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:43:04 --> Trying to get property 'password' of non-object
+in APPPATH\Controllers\Changepswd.php on line 23.
+ 1 APPPATH\Controllers\Changepswd.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'password\' of non-object', 'APPPATH\\Controllers\\Changepswd.php', 23, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:45:22 --> Array to string conversion
+in APPPATH\Controllers\Changepswd.php on line 23.
+ 1 APPPATH\Controllers\Changepswd.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Changepswd.php', 23, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 04:47:35 --> Array to string conversion
+in APPPATH\Controllers\Changepswd.php on line 23.
+ 1 APPPATH\Controllers\Changepswd.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Changepswd.php', 23, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:10:12 --> Undefined property: App\Controllers\Changepswd::$db
+in APPPATH\Controllers\Changepswd.php on line 21.
+ 1 APPPATH\Controllers\Changepswd.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$db', 'APPPATH\\Controllers\\Changepswd.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:10:49 --> Undefined property: App\Controllers\Changepswd::$db
+in APPPATH\Controllers\Changepswd.php on line 19.
+ 1 APPPATH\Controllers\Changepswd.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Changepswd::$db', 'APPPATH\\Controllers\\Changepswd.php', 19, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:19:09 --> Allowed fields must be specified for model: App\Models\User
+in SYSTEMPATH\BaseModel.php on line 1139.
+ 1 SYSTEMPATH\BaseModel.php(1139): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\User')
+ 2 SYSTEMPATH\BaseModel.php(841): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 4 APPPATH\Controllers\Changepswd.php(21): CodeIgniter\Model->update('admin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:24:04 --> Allowed fields must be specified for model: App\Models\User
+in SYSTEMPATH\BaseModel.php on line 1139.
+ 1 SYSTEMPATH\BaseModel.php(1139): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\User')
+ 2 SYSTEMPATH\BaseModel.php(841): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 4 APPPATH\Controllers\Changepswd.php(30): CodeIgniter\Model->update('admin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:25:41 --> Allowed fields must be specified for model: App\Models\User
+in SYSTEMPATH\BaseModel.php on line 1139.
+ 1 SYSTEMPATH\BaseModel.php(1139): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\User')
+ 2 SYSTEMPATH\BaseModel.php(841): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 4 APPPATH\Controllers\Changepswd.php(30): CodeIgniter\Model->update('admin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:27:05 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1577.
+ 1 SYSTEMPATH\BaseModel.php(1577): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Changepswd.php(29): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:30:29 --> Allowed fields must be specified for model: App\Models\User
+in SYSTEMPATH\BaseModel.php on line 1139.
+ 1 SYSTEMPATH\BaseModel.php(1139): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\User')
+ 2 SYSTEMPATH\BaseModel.php(841): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 4 APPPATH\Controllers\Changepswd.php(30): CodeIgniter\Model->update(1, [...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:31:19 --> Allowed fields must be specified for model: App\Models\User
+in SYSTEMPATH\BaseModel.php on line 1139.
+ 1 SYSTEMPATH\BaseModel.php(1139): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\User')
+ 2 SYSTEMPATH\BaseModel.php(841): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 4 APPPATH\Controllers\Changepswd.php(24): CodeIgniter\Model->update(1, [...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-18 05:31:59 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1577.
+ 1 SYSTEMPATH\BaseModel.php(1577): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Changepswd.php(30): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Changepswd->change_pass()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Changepswd))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
