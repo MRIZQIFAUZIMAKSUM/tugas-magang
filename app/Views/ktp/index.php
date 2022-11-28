@@ -59,7 +59,7 @@ else: ?>
                       <button type="reset" class="btn btn-warning col cancel">
                         <i class="fas fa-times-circle"></i>
                         <span>Cancel upload</span>
-                      </button>
+                      </button>cx xc
                     </div>
                   </div>
                   <div class="col-lg-6 d-flex align-items-center">

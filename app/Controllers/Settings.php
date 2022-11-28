@@ -17,31 +17,31 @@ class Settings extends BaseController
         $data['title']= 'Dashboard';
         return view('pp/index',$data);
     }
-    public function changepassword()
-    {
-        $userid = $this->request->getPost('userid');
-        $old_pswd = $this->request->getPost('old_pswd');
-        $new_pswd =$this->request->getpost('new_pswd');
+    // public function changepassword()
+    // {
+    //     $userid = $this->request->getPost('userid');
+    //     $old_pswd = $this->request->getPost('old_pswd');
+    //     $new_pswd =$this->request->getpost('new_pswd');
 
-        $password_sh1 = sha1($old_pswd);
+    //     $password_sh1 = sha1($old_pswd);
 
-        $user_model = new User();
+    //     $user_model = new User();
 
-        $user = $user_model->GetUserLogin($userid, $password_sh1);
+    //     $user = $user_model->GetUserLogin($userid, $password_sh1);
         
-        $session = \Config\Services::session();
-        if($user) {
-            $session->set(['user'=> $user]);
-            $user_model = new \App\Models\User();
+    //     $session = \Config\Services::session();
+    //     if($user) {
+    //         $session->set(['user'=> $user]);
+    //         $user_model = new \App\Models\User();
 
-            $user = $user_model->GetUserLogin($userid, $new_pswd);
-            return redirect()->to(base_url('/dashboard'));
-        }else {
+    //         $user = $user_model->GetUserLogin($userid, $new_pswd);
+    //         return redirect()->to(base_url('/dashboard'));
+    //     }else {
 
-            $session ->setFlashdata(['error_message'=> 'userId dan Password tidak sesuai']);
-            return redirect()->to(base_url('/login'));
-         }
-    }
+    //         $session ->setFlashdata(['error_message'=> 'userId dan Password tidak sesuai']);
+    //         return redirect()->to(base_url('/login'));
+    //      }
+    // }
     public function imgprofile()
     {  
  
@@ -62,13 +62,13 @@ class Settings extends BaseController
   
          if ($validated) {
              $avatar = $this->request->getFile('file');
-             $avatar->move(WRITEPATH . 'uploads');
+             $avatar->move(FCPATH . 'uploads');
  
            $data = [
              'photo' =>  $avatar->getClientName(),
            ];
  
-           $save = $builder->insert($data);
+           //$save = $builder->update(set:'user_image' = $avatar->getClientName());
            $msg = 'File has been uploaded';
          }
  
@@ -96,7 +96,7 @@ class Settings extends BaseController
    
           if ($validated) {
               $avatar = $this->request->getFile('file');
-              $avatar->move(WRITEPATH . 'uploads');
+              $avatar->move(FCPATH . 'uploads');
   
             $data = [
   

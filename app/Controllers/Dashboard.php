@@ -9,7 +9,7 @@ class Dashboard extends BaseController
     public function index()
     {
         $session = \Config\Services::session();
-        $data['title']= 'Admin LTE | Dashboard';
-        return view('dashboard',$data);
+        $data['title']= 'Dashboard';
+        return view('dashboard/index',$data);
     }
 }

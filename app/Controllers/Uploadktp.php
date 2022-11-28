@@ -31,7 +31,7 @@ class Uploadktp extends BaseController
   
          if ($validated) {
              $avatar = $this->request->getFile('file');
-             $avatar->move(WRITEPATH . 'uploads');
+             $avatar->move(FCPATH . 'uploads');
  
            $data = [
  

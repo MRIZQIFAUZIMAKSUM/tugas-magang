@@ -44,11 +44,32 @@ $routes->get('/profile', 'profile::index');
 $routes->get('/settings', 'settings::index');
 $routes->get('/uploadktp', 'uploadktp::index');
 $routes->get('/uploadpp', 'settings::pp');
-$routes->post('/uploadktp', 'settings::uploadktp');
+$routes->post('/uploadktp', 'uploadktp::uploadktp');
 $routes->post('/imgprofile', 'settings::imgprofile');
 $routes->get('/changepswd', 'changepswd::index');
 $routes->post('/changepswd', 'changepswd::change_pass');
-$routes->get('/user-list', 'userlist::index');
+$routes->get('/mitra-list', 'Manage::mitra', ['filter' => 'role:admin,super admin'] );
+$routes->get('/staff-list', 'Manage::staff', ['filter' => 'role:admin,super admin'] );
+$routes->get('/user-list', 'Manage::user', ['filter' => 'role:admin,super admin'] );
+$routes->get('/admin-list', 'Manage::admin', ['filter' => 'role:super admin'] );
+
+$routes->get('/admin', 'Admin::index', ['filter' => 'role:admin'] );
+$routes->get('/admin/index', 'Admin::index', ['filter' => 'role:admin'] );
+$routes->get('/user', 'User::index', ['filter' => 'role:user'] );
+$routes->get('/user/index', 'User::index', ['filter' => 'role:user'] );
+$routes->get('/superadmin', 'SuperAdmin::index', ['filter' => 'role:super admin'] );
+$routes->get('/superadmin/index', 'SuperAdmin::index', ['filter' => 'role:super admin'] );
+$routes->get('/mitra', 'Mitra::index', ['filter' => 'role:mitra'] );
+$routes->get('/mitra/index', 'Mitra::index', ['filter' => 'role:mitra'] );
+$routes->get('/staff', 'Staff::index', ['filter' => 'role::staff'] );
+$routes->get('/staff/index', 'Staff::index', ['filter' => 'role::staff'] );
+
+$routes->get('/detail', 'Admin::detail/$1', ['filter' => 'role:admin, super admin']);
+$routes->get('/detail/(:num)', 'Admin::detail/$1', ['filter' => 'role:admin, super admin']);
+$routes->get('/data-kosong', 'Manage::empety', ['filter' => 'role:admin,super admin'] );
+
+$routes->put('/detail/(:num)/edit', 'Crud::edit/$1', ['filter' => 'role:admin,super admin']);
+$routes->delete('/detail/delete/(:num)', 'Crud::delete/$1', ['filter' => 'role:admin,super admin']);
 
 /*
  * --------------------------------------------------------------------

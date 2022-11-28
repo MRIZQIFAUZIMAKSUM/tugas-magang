@@ -8,8 +8,9 @@ class User extends BaseController
 {
     public function index()
     {
-        $session = \Config\Services::session();
-        $data['title']= 'Dashboard';
-        return view('user/index',['error_message'=> $session->getFlashdata('error_message'),$data]);
+        $data['title']= 'Admin Dashboard';
+        $users = new \Myth\Auth\Models\UserModel();
+        $data['users'] = $users;
+        return view('user/index',$data);
     }
 }

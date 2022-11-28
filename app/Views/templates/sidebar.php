@@ -11,10 +11,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('AdminLTE/dist/img/user2-160x160.jpg') ?>" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url('/uploads/'. user()->user_image ) ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="/profile" class="d-block">Admin</a>
+          <a href="/profile" class="d-block"> <?= user()->username; ?></a>
         </div>
       </div>
 
@@ -43,7 +43,28 @@
               </p>
             </a>
                </li>
+        <?php if(in_groups(['admin','super admin'])) : ?>
           <li class="nav-header">USER MANAGEMENT</li>
+          <li class="nav-item">
+            <a href="/mitra-list" class="nav-link">
+            <ion-icon name="people-outline"></ion-icon>
+            <i class="nav-icon fas fa-users" >
+            </i>  
+            <p>
+              Mitra List
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/staff-list" class="nav-link">
+            <ion-icon name="people-outline"></ion-icon>
+            <i class="nav-icon fas fa-users" >
+            </i>  
+            <p>
+              Staff List
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="/user-list" class="nav-link">
             <ion-icon name="people-outline"></ion-icon>
@@ -54,7 +75,20 @@
               </p>
             </a>
           </li>
-
+        <?php endif ?>
+          
+        <?php if(in_groups('super admin')) : ?>
+          <li class="nav-item">
+            <a href="/admin-list" class="nav-link">
+            <ion-icon name="people-outline"></ion-icon>
+            <i class="nav-icon fas fa-users" >
+            </i>  
+            <p>
+              Admin List
+              </p>
+            </a>
+          </li>
+        <?php endif ?>
           <li class="nav-header">USER PROFILE</li>
           <li class="nav-item">
             <a href="/profile" class="nav-link">
