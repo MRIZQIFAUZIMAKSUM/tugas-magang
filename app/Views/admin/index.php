@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 use Kint\Parser\ToStringPlugin;
 ?>
 <?= $this->extend('templates/index') ?>

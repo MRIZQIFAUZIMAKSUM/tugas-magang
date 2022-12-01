@@ -66,10 +66,12 @@ $routes->get('/staff/index', 'Staff::index', ['filter' => 'role::staff'] );
 
 $routes->get('/detail', 'Admin::detail/$1', ['filter' => 'role:admin, super admin']);
 $routes->get('/detail/(:num)', 'Admin::detail/$1', ['filter' => 'role:admin, super admin']);
-$routes->get('/data-kosong', 'Manage::empety', ['filter' => 'role:admin,super admin'] );
 
-$routes->put('/detail/(:num)/edit', 'Crud::edit/$1', ['filter' => 'role:admin,super admin']);
-$routes->delete('/detail/delete/(:num)', 'Crud::delete/$1', ['filter' => 'role:admin,super admin']);
+$routes->get('/add-user', 'Manage::createindex', ['filter' => 'role:admin,super admin']);
+$routes->post('/add-user', 'Manage::create', ['filter' => 'role:admin,super admin']);
+$routes->get('/detail/(:segment)/edit', 'Manage::editindex/$1', ['filter' => 'role:admin,super admin']);
+$routes->put('/detail/(:segment)/edit', 'Manage::edit/$1', ['filter' => 'role:admin,super admin']);
+$routes->delete('/detail/(:segment)/delete', 'Manage::delete/$1', ['filter' => 'role:admin,super admin']);
 
 /*
  * --------------------------------------------------------------------

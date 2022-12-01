@@ -26,7 +26,7 @@ class Admin extends BaseController
         $query = $this->builder->get();
         $data['users'] = $query->getResult();
         if (empty($data['user'])) {
-            return view('crud/datakosong',$data);
+            return view('crud/zero',$data);
          }
         return view('admin/index',$data);
     }
@@ -44,10 +44,10 @@ class Admin extends BaseController
      $data['user'] = $query->getRow();
  
      if (empty($data['user']) || $id == 0) {
-        return view('crud/datakosong',$data);
+        return view('crud/zero',$data);
      }
 
-     return view('admin/detail', $data);
+     return view('crud/detail', $data);
     }
    
 }
